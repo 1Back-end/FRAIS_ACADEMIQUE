@@ -78,7 +78,7 @@
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<small><a class="dropdown-item" href="../login/profile.php"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></small>
 						<small><a class="dropdown-item" href="../login/Changer_Mot_De_Passe.php"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Changer mot de passe</a></small>
-						<small><a class="dropdown-item" href="../login/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a></small>
+						<small><a class="dropdown-item" href="../login/login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a></small>
 					</div>
 				</div>
 			</div>
@@ -90,7 +90,7 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="index.html">
+			<a href="#">
 				<img src="../vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
 				<img src="../vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
@@ -110,14 +110,14 @@
 
 
 					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
+						<a href="../eleve/liste_des_eleves.php" class="dropdown-toggle no-arrow">
 							<span class="micon fas  fa-user-graduate"></span><span class="mtext">Élèves</span>
 						</a>	
 					</li>
 
 					
 					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
+						<a href="../parents/liste_des_parents.php" class="dropdown-toggle no-arrow">
 							<span class="micon fas fa-user-plus"></span><span class="mtext">Parents</span>
 						</a>
 					</li>

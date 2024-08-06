@@ -22,22 +22,27 @@
 <body>
 
 <div class="container mt-5 pb-5">
-    <div class="login-box card-box border-radius-10">
-        <div class="login-title text-center mb-4">
-            <h2 class="text-capitalize big_tilte">Se connecter</h2>
+    <div class="login-box card-box">
+        <div class="mb-2 text-center">
+        <h2 class="text-capitalize big_tilte">Se connecter</h2>
+        </div>
+        <div class="mb-2 text-center">
+         <p>
+            Nous sommes ravis de vous revoir ! 👍
+         </p>
         </div>
 
         <form method="POST">
             <!-- Email Input -->
             <div class="mb-3">
                 <label for="username" class="form-label">Adresse mail</label>
-                <input type="email" id="username" name="username"  class="form-control form-control-lg shadow-none" placeholder="Adresse mail">
+                <input type="email" id="username" name="username"  class="form-control form-control input-form shadow-none" placeholder="Adresse mail">
             </div>
 
             <!-- Password Input with Toggle Visibility -->
             <div class="mb-3">
                 <label for="password" class="form-label">Mot de passe</label>
-                <input type="password" name="password" id="password" class="shadow-none form-control form-control-lg" placeholder="***************">
+                <input type="password" name="password" id="password" class="shadow-none form-control form-control input-form" placeholder="***************">
             </div>
 
             <!-- Forgot Password Link -->
@@ -50,11 +55,11 @@
 
             <!-- Submit Button -->
             <div class="mb-2">
-                <!-- <button name="submit" type="submit" class="btn btn-customize btn_submit btn-block text-white">
+                <!-- <button name="submit" type="submit" class="btn btn-form btn-customize btn_submit btn-block text-white">
                     Se Connecter 
                     
                 </button> -->
-                <a href="../include/include.php" class="btn btn-customize btn_submit btn-block text-white">Se Connecter 
+                <a href="../include/menu.php" class="btn btn-form btn-customize btn_submit btn-block text-white">Se Connecter 
                 </a>
             </div>
         </form>

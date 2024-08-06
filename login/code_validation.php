@@ -27,24 +27,24 @@
                 <h5 class="big_tilte text-center">Tapez votre code</h5>
                 <div class="mb-2">
                     <small>
-                    Vous avez reçu un code par e-mail. Veuillez le saisir dans ces champs.
+                    Vous avez reçu un code par e-mail. Veuillez le saisir dans ces champs ! 🔢
                     </small>
                 </div>
                 <div class="otp_input text-start mb-3">
                     <div class="d-flex align-items-center justify-content-between mt-2">
-                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code1" class="w-10 shadow-none mx-2 text-center form-control font-14" placeholder="">
-                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code2" class="w-10 shadow-none mx-2 text-center form-control font-14" placeholder="">
-                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code3" class="w-10 shadow-none mx-2 text-center form-control font-14" placeholder="">
-                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code4" class="w-10 shadow-none mx-2 text-center form-control font-14" placeholder="">
+                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code1" class="w-10 shadow-none mx-2 text-center form-control font-14 " placeholder="">
+                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code2" class="w-10 shadow-none mx-2 text-center form-control font-14 " placeholder="">
+                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code3" class="w-10 shadow-none mx-2 text-center form-control font-14 " placeholder="">
+                        <input type="text" maxlength="1" onkeypress="return isNumberKey(event)" name="code4" class="w-10 shadow-none mx-2 text-center form-control font-14 " placeholder="">
                     </div>
                 </div>
                 <div class="col-md-12 mb-3">
-                <a href="" class="btn-link">Renvoyer le code ?</a>
+                <a href="" class="btn-link text-decoration-none">Renvoyer le code ?</a>
                 </div>
                <div class="col-md-12 mb-3">
                <input type="hidden">
-                <!-- <button type="submit" name="submit" class="btn btn-customize text-white btn-block">Valider</button> -->
-                <a href="reset_password.php" class="btn btn-customize text-white btn-block">Valider</a>
+                <!-- <button type="submit" name="submit" class="btn btn-customize text-white btn-block btn-form">Valider</button> -->
+                <a href="reset_password.php" class="btn btn-customize text-white btn-block btn-form">Valider</a>
                </div>
                 
             </form>

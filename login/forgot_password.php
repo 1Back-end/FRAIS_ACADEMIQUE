@@ -24,22 +24,22 @@
 
 <div class="container mt-5">
     <div class="col-md-6 col-sm-12 mx-auto p-2">
-        <div class="card-box p-3">
+        <div class="card-box p-4">
     
            <div class="mb-2 text-center">
            <h5 class="text-center big_tilte">Réinitialiser mon mot de passe</h5>
-           <small>Veuillez entrer votre l'adresse mail liée à votre compte</small>
+           <small>Veuillez entrer votre l'adresse mail liée à votre compte 📧</small>
            </div>
 
            <form action="">
             <div class="mb-3">
                 <label for="email" class="form-label">Adresse mail</label>
-                <input type="email" class="shadow-none form-control" id="email">
+                <input type="email" class="shadow-none form-control input-form" id="email">
             </div>
 
             <div class="mb-3">
-                <a href="code_validation.php" class="btn btn-customize btn_submit text-white btn-block">Réinitialiser</a>
-                <!-- <button type="submit" class="btn btn-customize btn_submit text-white btn-block">Réinitialiser</button> -->
+                <a href="code_validation.php" class="btn btn-customize btn-form btn_submit text-white btn-block">Réinitialiser</a>
+                <!-- <button type="submit" class="btn btn-customize btn-form btn_submit text-white btn-block">Réinitialiser</button> -->
             </div>
 
             <div class="mb-2 text-center">
