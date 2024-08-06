@@ -1,0 +1,31 @@
+.fa, .fas {
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+.btn-link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.43;
+    border-bottom: dashed 1px transparent;
+    color: #1F4283;
+    text-decoration: none;
+}
+.big_tilte{
+    color: #1F4283;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.form-label{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.43;
+    color: #1F4283;
+}
+
+@media (max-width:732px) {
+    small{
+        font-size: 10px;
+    }
+    
+}
