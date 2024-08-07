@@ -1,5 +1,21 @@
 <?php
 
+function getCurrentPageName() {
+    // Récupérer le nom du fichier PHP actuel sans extension
+    $pageName = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+    
+    // Remplacer les soulignements par des espaces
+    $pageName = str_replace('_', ' ', $pageName);
+    
+    // Capitaliser chaque mot
+    $pageName = ucwords($pageName);
+    
+    return $pageName;
+}
+
+
+
+
 function generateUuidV4() {
     $data = random_bytes(16);
     

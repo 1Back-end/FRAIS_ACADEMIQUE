@@ -1,9 +1,23 @@
+
+	
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+	<title>
+	<?php 
+        // Fonction pour obtenir le nom de la page sans extension et capitaliser les mots
+        function getCurrentPageName() {
+            // Obtenir le nom de fichier de la page actuelle
+            $pageName = basename($_SERVER['PHP_SELF'], ".php");
+            // Remplacer les underscores et tirets par des espaces et capitaliser les mots
+            $pageName = str_replace(array('_', '-'), ' ', $pageName);
+            return ucwords($pageName);
+        }
+        echo getCurrentPageName(); 
+        ?>
+	</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -103,58 +117,58 @@
 				<ul id="accordion-menu">
 
 					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-tachometer-alt"></span><span class="mtext">Tableau de bord</span>
+						<a href="../dashboard/tableau_de_bord.php" class="dropdown-toggle no-arrow">
+							<span class="micon fa fa-bars"></span><span class="mtext">Tableau de bord</span>
 						</a>
 					</li>
 
 
 					<li>
 						<a href="../eleve/liste_des_eleves.php" class="dropdown-toggle no-arrow">
-							<span class="micon fas  fa-user-graduate"></span><span class="mtext">Élèves</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Élèves</span>
 						</a>	
 					</li>
 
 					
 					<li>
 						<a href="../parents/liste_des_parents.php" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-user-plus"></span><span class="mtext">Parents</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Parents</span>
 						</a>
 					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-chalkboard-teacher"></span><span class="mtext">Classes</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Classes</span>
 						</a>
 					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-money-bill"></span><span class="mtext">Frais</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Frais</span>
 						</a>
 					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-credit-card"></span><span class="mtext">Paiements</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Paiements</span>
 						</a>
 					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-receipt"></span><span class="mtext">Reçus</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Reçus</span>
 						</a>
 					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-lock"></span><span class="mtext">Administrations</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Administrations</span>
 						</a>
 					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
-							<span class="micon fas fa-cog"></span><span class="mtext">Paramètres</span>
+							<span class="micon fa fa-bars"></span><span class="mtext">Paramètres</span>
 						</a>
 					</li>
 
@@ -163,12 +177,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mobile-menu-overlay"></div>
-
-	<div class="main-container">
-	<?php include("../controllers/controllers.php");?>
-			
-		</div>
+	
 	</div>
 	<!-- js -->
 	<script src="../vendors/scripts/core.js"></script>
