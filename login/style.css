@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
 .fa, .fas {
     font-weight: 900;
     font-size: 20px;
@@ -15,6 +17,7 @@
     color: #1F4283;
     font-weight: 700;
     line-height: 1.2;
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
 .form-label{
     font-weight: 500;
@@ -22,9 +25,12 @@
     line-height: 2.43;
     color: #1F4283;
 }
-.input-form{
-    border-radius: 20px;
+input[type="text"] {
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
+/* .input-form{
+    border-radius: 30px;
+} */
 .btn-form{
     border-radius: 20px;
 }

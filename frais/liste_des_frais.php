@@ -21,8 +21,6 @@
     </div>
 </div>
 
-
-    
 <div class="col-md-12 col-sm-12">
     <div class="card-box p-3">
         <div class="table-responsive">
@@ -30,39 +28,32 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Adresse</th>
-                        <th>Contact</th>
-                        <th>Email</th>
+                        <th>Classe</th>
+                        <th>Inscription</th>
+                        <th>Frais de scolarité</th>
+                        <th>Frais d'examen</th>
+                        <th>Autres frais</th>
+                        <th>Total</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Dupont</td>
-                        <td>Jean</td>
-                        <td>123 Rue Principale</td>
-                        <td>+33 6 12 34 56 78</td>
-                        <td>jean.dupont@example.com</td>
+                        <td>6ème</td>
+                        <td>20,000 FCFA</td>
+                        <td>500,000 FCFA</td>
+                        <td>30,000 FCFA</td>
+                        <td>10,000 FCFA</td>
+                        <td>590,000 FCFA</td>
                         <td class="d-flex align-items-center">
-                            <button class="btn btn-danger btn-sm btn-xs shadow-none mx-3">Supprimer</button>
-                            <button class="btn btn-info btn-sm btn-xs shadow-none">Détails</button>
+                            <button class="btn btn-customize text-white btn-sm btn-xs mx-2">Modifier</button>
+                            <button class="btn btn-danger btn-sm btn-xs">Supprimer</button>
                         </td>
                     </tr>
-                    
+                    <!-- Ajouter d'autres lignes ici pour d'autres classes -->
                 </tbody>
             </table>
         </div>
     </div>
-</div>
-
-
-
-
-
-
-
-
 </div>

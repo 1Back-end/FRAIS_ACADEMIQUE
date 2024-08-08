@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
     font-style: normal;
 }
 .sidebar-menu .dropdown-toggle {
@@ -9,7 +9,7 @@ body {
     color: #fff;
     font-weight: 300;
     letter-spacing: .03em;
-    font-family: "Poppins", sans-serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
 .sidebar-menu .submenu li a {
     display: block;
@@ -19,7 +19,7 @@ body {
     font-weight: 300;
     letter-spacing: .03em;
     position: relative;
-    font-family: "Poppins", sans-serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
 }
 .dropdown-item {
     font-size: 16px;
@@ -27,7 +27,7 @@ body {
     padding: .657rem 1rem;
       padding-left: 1rem;
     color: #444;
-    font-family: "Poppins", sans-serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
@@ -37,39 +37,51 @@ body {
     vertical-align: middle;
     margin-left: 5px;
     color: #131e22;
-    font-family: "Poppins", sans-serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
   }
-  .custom-file-input, .custom-file-label, .custom-select, .form-control {
-    font-family: "Poppins", sans-serif;
-    color: #131e22;
-    font-weight: 400;
-    height: 45px;
-    border-color: #d4d4d4;
-    letter-spacing: .035em;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-  }
+
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-weight: 700;
-    color: #202342;
-    font-family: "Poppins", sans-serif;
+    color: #1F4283;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-size: 32px;
   }
-  .btn {
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0;
-    font-weight: 500;
-    padding: .438rem 1rem;
-  }
-/* Règles de media queries pour les écrans de petite taille */
-@media only screen and (max-width: 768px) {
-  h1 { font-size: 20px; }
-  h2 { font-size: 18px; }
-  h3 { font-size: 16px; }
-  h4 { font-size: 16px; }
-  h5 { font-size: 14px; }
-  h6 { font-size: 14px; }
+
+input[type="text"], input[type="email"], input[type="date"], input[type="password"] {
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+small{
+  font-size: 10px;
+}
+.btn{
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+label{
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+
+}
+.select-form{
+  cursor: pointer;
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+.profile-image {
+  width:70px; /* Taille de l'image */
+  height: 60px; /* Taille de l'image */
+  border-radius: 50%; /* Pour arrondir l'image */
+  object-fit: cover; /* Pour que l'image conserve ses proportions et remplisse le conteneur */
+  cursor: pointer; /* Curseur pointer pour indiquer que l'image est cliquable */
+  text-align: center;
+}
+input[type="file"]{
+  border: none;
+  font-family: "Fuzzy Bubbles", sans-serif;
+
 }
 
 .btn-icons {
@@ -81,7 +93,7 @@ body {
   padding: 0.25rem 0.5rem;
   font-size: 12px;
   line-height: 1.5;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
@@ -92,7 +104,9 @@ body {
 
 @media only screen and (max-width: 768px) {
   .text-uppercase {
-    font-size: 12px; /* Réduire davantage la taille pour les écrans plus petits si nécessaire */
+    font-size: 16px; /* Réduire davantage la taille pour les écrans plus petits si nécessaire */
+    font-weight: 700;
+    line-height: 1.6;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -124,6 +138,7 @@ body {
  }
  .btn-customize{
   background-color:#1F4283;
+  font-family: "Fuzzy Bubbles", sans-serif;
  }
 @media only screen and (max-width: 768px) {
   .table thead th {
@@ -135,13 +150,15 @@ body {
 }
 @media (max-width: 767px) {
   .user-info-dropdown .dropdown-toggle .user-name {
-    font-size: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1F4283;
   }
 }
 @media (max-width: 767px) {
   .user-info-dropdown .dropdown-toggle .user-icon {
     font-size: 24px;
-    color: #1b00ff;
+    color: #1F4283;
     line-height: 52px;
     text-align: center;
     width: 40px;
@@ -159,36 +176,9 @@ body {
       padding-left: 1rem;
     padding-left: 1rem;
     color: #444;
-    font-family: "Poppins", sans-serif;
+    font-family: "Fuzzy Bubbles", sans-serif;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-  }
-}
-.custom-file-input, .custom-file-label, .custom-select, .form-control {
-  font-family:"Poppins", sans-serif;
-  color: #131e22;
-  font-weight: 400;
-  height: 45px;
-  border-color: #d4d4d4;
-  letter-spacing: .035em;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  font-size: 14px;
-
-}
-
-@media (max-width: 767px) {
-  .custom-file-input, .custom-file-label, .custom-select, .form-control {
-    font-family: "Poppins", sans-serif;
-    color: #131e22;
-    font-weight: 400;
-    height: 45px;
-    border-color: #d4d4d4;
-    letter-spacing: .035em;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    font-size: 12px;
-   
   }
 }
 
@@ -197,6 +187,7 @@ body {
     display: inline-block;
     margin-bottom: .5rem;
     font-size: 14px;
+    /* font-weight: 700; */
   }
 }
 
@@ -213,9 +204,7 @@ body {
     padding: 1rem;
   }
 }
-b, strong {
-  font-weight: 500;
-}
+
 .custom-pagination .page-item .page-link {
   color: #1F4283; /* Couleur du texte */
 }
@@ -235,12 +224,12 @@ b, strong {
   color: #202342;
   font-weight: 700;
   text-transform: capitalize;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Fuzzy Bubbles", sans-serif;
   padding-bottom: 5px;
 }
 .docs-buttons label, .notification-list ul li a p, .project-info-right p {
   margin-bottom: 0;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Fuzzy Bubbles", sans-serif;
 }
 .notification-list ul li a img {
   width: 50px;
@@ -280,11 +269,7 @@ b, strong {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
-.btn-primary {
-  color: #fff;
-  background-color: #00204a;
-  border-color: #00204a;
-}
+
 .user-info-dropdown {
   padding: 5px 10px 5px 0;
   margin-right: 18px;

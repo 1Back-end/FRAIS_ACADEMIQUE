@@ -1,4 +1,6 @@
 <?php
+include("../database/connexion.php");
+
 
 function getCurrentPageName() {
     // Récupérer le nom du fichier PHP actuel sans extension
@@ -11,6 +13,20 @@ function getCurrentPageName() {
     $pageName = ucwords($pageName);
     
     return $pageName;
+}
+
+function obtenirRelations() {
+    return [
+        'pere' => 'Père',
+        'mere' => 'Mère',
+        'oncle' => 'Oncle',
+        'tante' => 'Tante',
+        'frere' => 'Frère',
+        'soeur' => 'Sœur',
+        'tuteur' => 'Tuteur',
+        'tutrice' => 'Tutrice',
+        'autre' => 'Autre'
+    ];
 }
 
 
@@ -30,39 +46,31 @@ $uuid = generateUuidV4();
 
 
 
-function generateSecurePassword($length = 12) {
-    if ($length < 12) {
-        throw new InvalidArgumentException('Le mot de passe doit avoir une longueur d\'au moins 12 caractères.');
-    }
-
-    $lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    $uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+function generateRandomPassword($length = 12) {
+    $lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+    $upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $numbers = '0123456789';
     $specialChars = '!@#$%&';
-    
-    // Assurez-vous que le mot de passe contient au moins un caractère de chaque type
-    $password = [
-        $lowercase[random_int(0, strlen($lowercase) - 1)],
-        $uppercase[random_int(0, strlen($uppercase) - 1)],
-        $numbers[random_int(0, strlen($numbers) - 1)],
-        $specialChars[random_int(0, strlen($specialChars) - 1)],
-    ];
-    
-    // Remplir le reste du mot de passe avec des caractères aléatoires
-    $allChars = $lowercase . $uppercase . $numbers . $specialChars;
-    $remainingLength = $length - count($password);
-    
-    for ($i = 0; $i < $remainingLength; $i++) {
-        $password[] = $allChars[random_int(0, strlen($allChars) - 1)];
+
+    $allChars = $lowerCase . $upperCase . $numbers . $specialChars;
+
+    // Ensure the password contains at least one of each required character type
+    $password = '';
+    $password .= $lowerCase[rand(0, strlen($lowerCase) - 1)];
+    $password .= $upperCase[rand(0, strlen($upperCase) - 1)];
+    $password .= $numbers[rand(0, strlen($numbers) - 1)];
+    $password .= $specialChars[rand(0, strlen($specialChars) - 1)];
+
+    // Generate the remaining characters randomly
+    for ($i = strlen($password); $i < $length; $i++) {
+        $password .= $allChars[rand(0, strlen($allChars) - 1)];
     }
 
-    // Mélanger les caractères pour assurer une distribution aléatoire
-    shuffle($password);
+    // Shuffle the generated password to ensure randomness
+    $password = str_shuffle($password);
 
-    return implode('', $password);
+    return $password;
 }
-$password = generateSecurePassword();
-
 
 function generateSixDigitToken() {
     return str_pad(random_int(0, 999999), 6, '0', STR_PAD_LEFT);
@@ -127,6 +135,19 @@ function generatePaymentCode($length = 12) {
 }
 $paymentCode = generatePaymentCode();
 
+function recupererAdmins($connexion) {
+    // Préparer la requête SQL pour récupérer les administrateurs non supprimés
+    $sql = "SELECT id AS id_user, first_name AS Nom, last_name AS Prénom, address AS Adresse, contact_number AS Contact, email AS Email 
+            FROM tlbl_users 
+            WHERE is_deleted = FALSE AND role = 1"; // Supposons que le rôle 1 correspond aux administrateurs
 
+    // Exécuter la requête SQL
+    $stmt = $connexion->prepare($sql);
+    $stmt->execute();
+
+    // Récupérer les résultats
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+$admins = recupererAdmins($connexion);
 
 ?>

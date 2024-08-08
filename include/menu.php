@@ -6,17 +6,7 @@
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
 	<title>
-	<?php 
-        // Fonction pour obtenir le nom de la page sans extension et capitaliser les mots
-        function getCurrentPageName() {
-            // Obtenir le nom de fichier de la page actuelle
-            $pageName = basename($_SERVER['PHP_SELF'], ".php");
-            // Remplacer les underscores et tirets par des espaces et capitaliser les mots
-            $pageName = str_replace(array('_', '-'), ' ', $pageName);
-            return ucwords($pageName);
-        }
-        echo getCurrentPageName(); 
-        ?>
+	<?php echo strtoupper(ucfirst(str_replace(".php", "", basename($_SERVER['PHP_SELF']))));?>
 	</title>
 
 	<!-- Site favicon -->
@@ -26,10 +16,6 @@
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="../src/plugins/datatables/css/dataTables.bootstrap4.min.css">
@@ -45,7 +31,7 @@
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
-			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+			<!-- <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div> -->
 			<div class="header-search">
 				<form>
 					<div class="form-group mb-0">
@@ -70,7 +56,7 @@
 							<ul>
 								<li>
 									<a href="#">
-										<img src="../vendors/images/img.jpg" alt="">
+										<img src="../vendors/images/profile.jpg" alt="" class="shadow-none">
 										<h3>John Doe</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
@@ -80,19 +66,21 @@
 					</div>
 				</div>
 			</div>
-
+             <?php include("../login/session_user.php");?>
 			<div class="user-info-dropdown">
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-						<span class="user-icon shadow-none">
-							<img src="../vendors/images/photo1.jpg" alt="">
-						</span>
-						<span class="user-name">Ross C. Lopez</span>
+					<span class="user-icon shadow-none">
+						<img src="../uploads/<?= htmlspecialchars($_SESSION['photo'] ?? '../vendors/images/profile.jpg') ?>" alt="Photo de profil">
+					</span>
+					<span class="user-name ml-3">
+						<?= htmlspecialchars($_SESSION['last_name'] . ' ' . $_SESSION['first_name']) ?>
+					</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<small><a class="dropdown-item" href="../login/profile.php"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></small>
 						<small><a class="dropdown-item" href="../login/Changer_Mot_De_Passe.php"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Changer mot de passe</a></small>
-						<small><a class="dropdown-item" href="../login/login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a></small>
+						<small><a class="dropdown-item" href="../login/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a></small>
 					</div>
 				</div>
 			</div>
@@ -143,7 +131,7 @@
 					</li>
 
 					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
+						<a href="../frais/liste_des_frais.php" class="dropdown-toggle no-arrow">
 							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Frais</span>
 						</a>
 					</li>
@@ -161,7 +149,7 @@
 					</li>
 
 					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
+						<a href="../admin/liste_des_admins.php" class="dropdown-toggle no-arrow">
 							<span class="micon fa fa-bars"></span><span class="mtext">Administrations</span>
 						</a>
 					</li>

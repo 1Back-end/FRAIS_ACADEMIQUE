@@ -1,0 +1,13 @@
+.icon-back {
+    border-radius:50%;
+   height: 35px;
+   width: 35px;
+   background-color:#1F4283;
+   color:#fff;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   position: absolute;
+   top: 50%;
+   left: 10px; transform: translateY(-50%);
+  }
