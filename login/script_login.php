@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['photo'] = $user['photo'];
                 // Redirection vers une page protégée ou tableau de bord
-                header("Location: ../dashboard/tableau_de_bord.php");
+                header("Location: ../dashboard_admin/tableau_de_bord.php");
                 exit();
             } else {
                 $erreur = "Mot de passe incorrect.";

@@ -29,9 +29,6 @@ function obtenirRelations() {
     ];
 }
 
-
-
-
 function generateUuidV4() {
     $data = random_bytes(16);
     
@@ -118,9 +115,25 @@ function getFrenchMonths() {
 
     return $months;
 }
-
 // Exemple d'utilisation
 $months = getFrenchMonths();
+
+
+function generateMatricule($prefix = "EL", $length = 10) {
+    // Obtenir l'année en cours
+    $year = date("Y");
+
+    // Générer un nombre aléatoire unique pour l'étudiant
+    $uniqueId = strtoupper(bin2hex(random_bytes($length/2)));
+
+    // Créer le matricule en combinant le préfixe, l'année, et l'identifiant unique
+    $matricule = $prefix . $year . $uniqueId;
+
+    return $matricule;
+}
+
+// Exemple d'utilisation
+$nouveauMatricule = generateMatricule();
 
 function generatePaymentCode($length = 12) {
     $chars = 'ABCDEFGHI0123456789'; // Caractères autorisés
@@ -139,7 +152,7 @@ function recupererAdmins($connexion) {
     // Préparer la requête SQL pour récupérer les administrateurs non supprimés
     $sql = "SELECT id AS id_user, first_name AS Nom, last_name AS Prénom, address AS Adresse, contact_number AS Contact, email AS Email 
             FROM tlbl_users 
-            WHERE is_deleted = FALSE AND role = 1"; // Supposons que le rôle 1 correspond aux administrateurs
+            WHERE is_deleted = FALSE AND role = 1 ORDER BY date_added DESC"; // Supposons que le rôle 1 correspond aux administrateurs
 
     // Exécuter la requête SQL
     $stmt = $connexion->prepare($sql);

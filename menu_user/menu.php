@@ -66,7 +66,7 @@
 					</div>
 				</div>
 			</div>
-             <?php include("../login/session_user.php");?>
+             <!-- <?php include("../login/session_user.php");?>
 			<div class="user-info-dropdown">
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -76,7 +76,7 @@
 					<span class="user-name ml-3">
 						<?= htmlspecialchars($_SESSION['last_name'] . ' ' . $_SESSION['first_name']) ?>
 					</span>
-					</a>
+					</a> -->
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<small><a class="dropdown-item" href="../login/profile.php"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></small>
 						<small><a class="dropdown-item" href="../login/Changer_Mot_De_Passe.php"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Changer mot de passe</a></small>
@@ -93,8 +93,8 @@
 	<div class="left-side-bar">
 		<div class="brand-logo">
 			<a href="#">
-				<img src="../vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-				<img src="../vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+				<img src="../vendors/images/logo.jpg" alt="" class="dark-logo">
+				<img src="../vendors/images/logo.jpg" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -110,6 +110,26 @@
 						</a>
 					</li>
 
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon fa fa-bars"></span><span class="mtext">Établissements</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="highchart.html">Liste des Établissements</a></li>
+							<li><a href="knob-chart.html">Ajouter un Établissement</a></li>
+						</ul>
+					</li>
+
+
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Frais</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="knob-chart.html">Catégories de Frais</a></li>
+						</ul>
+					</li>
+
 
 					<li>
 						<a href="../eleve/liste_des_eleves.php" class="dropdown-toggle no-arrow">
@@ -118,23 +138,31 @@
 					</li>
 
 					
-					<li>
-						<a href="../parents/liste_des_parents.php" class="dropdown-toggle no-arrow">
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Parents</span>
 						</a>
+						<ul class="submenu">
+							<li><a href="highchart.html">Liste des Parents</a></li>
+							<li><a href="knob-chart.html">Ajouter un Parent </a></li>
+						</ul>
 					</li>
-
+					
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Parents</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="highchart.html">Liste des Parents</a></li>
+							<li><a href="knob-chart.html">Ajouter un Parent </a></li>
+						</ul>
+					</li>
 					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
+						<a href="../classe/liste_des_classes.php" class="dropdown-toggle no-arrow">
 							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Classes</span>
 						</a>
 					</li>
 
-					<li>
-						<a href="../frais/liste_des_frais.php" class="dropdown-toggle no-arrow">
-							<span class="micon fa fa-bars"></span><span class="mtext">Gestion des Frais</span>
-						</a>
-					</li>
 
 					<li>
 						<a href="javascript:;" class="dropdown-toggle no-arrow">
@@ -148,16 +176,24 @@
 						</a>
 					</li>
 
-					<li>
-						<a href="../admin/liste_des_admins.php" class="dropdown-toggle no-arrow">
-							<span class="micon fa fa-bars"></span><span class="mtext">Administrations</span>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon fa fa-bars"></span><span class="mtext">Utilisateurs</span>
 						</a>
+						<ul class="submenu">
+							<li><a href="highchart.html">Gestion des Utilisateurs</a></li>
+							<li><a href="knob-chart.html">Rôles et Permissions</a></li>
+						</ul>
 					</li>
 
-					<li>
-						<a href="javascript:;" class="dropdown-toggle no-arrow">
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon fa fa-bars"></span><span class="mtext">Paramètres</span>
 						</a>
+						<ul class="submenu">
+							<li><a href="highchart.html">Paramètres du Compte </a></li>
+							<li><a href="knob-chart.html">Paramètres de la Plateforme</a></li>
+						</ul>
 					</li>
 
 					

@@ -88,26 +88,6 @@
         $(".alert").alert('close');
     }, 2000);
 });
-
-document.getElementById('btnSubmit').addEventListener('click', function() {
-    var btn = this;
-    var loader = btn.querySelector('.spinner-border');
-    var btnText = btn.querySelector('.btn-text');
-
-    // Afficher le loader et masquer le texte
-    loader.classList.remove('d-none');
-    btnText.classList.add('d-none');
-
-    // Désactiver le bouton pour empêcher de nouveaux clics
-    btn.disabled = true;
-
-    // Attendre 2 secondes avant de réactiver le bouton (à adapter selon votre logique)
-    setTimeout(function() {
-        btn.disabled = false;
-        loader.classList.add('d-none');
-        btnText.classList.remove('d-none');
-    }, 2000); // 2000 millisecondes = 2 secondes
-});
 </script>
 
 </body>

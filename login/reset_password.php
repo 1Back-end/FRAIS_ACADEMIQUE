@@ -14,7 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/style.css">
 	<link rel="stylesheet" type="text/css" href="../vendors/styles/main.css">
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="style.css">
 
@@ -41,8 +40,7 @@
 
                     <div class="mb-3">
                     <label for="password" class="form-label">Confirmer mot de passe</label>
-                        <input type="password"  name="confirm_password" id="confirm_password" class="form-control shadow-none form-control input-form" placeholder="**********">
-                        
+                        <input type="password"  name="confirm_password" id="confirm_password" class="form-control shadow-none form-control input-form" placeholder="**********">   
                     </div>
 
                     <div class="row align-items-center mb-2">
